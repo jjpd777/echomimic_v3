@@ -1,36 +1,19 @@
-python infer_flash_pro.py \
-    --image_path "/path/to/your/directory/input.jpg" \
-    --audio_path "/path/to/your/directory/audio.wav" \
+python infer_flash_pro.py --GPU_memory_mode "sequential_cpu_offload" \
+    --image_path "/workspace/echomimic_v3/sample.png" \
+    --audio_path "/workspace/echomimic_v3/sample.wav" \
     --prompt "A person is speaking." \
     --num_inference_steps 8 \
-    --config_path "config/wan2.1/wan_civitai.yaml" \
-    --model_name "/path/to/your/directory/Wan2.1-Fun-V1.1-1.3B-InP" \
-    --ckpt_idx 50000 \
-    --transformer_path "/path/to/your/directory/flash_pro/transformer/diffusion_pytorch_model.safetensors" \
-    --vae_path None \
-    --lora_path None \
+    --config_path "/workspace/echomimic_v3/config/config.yaml" \
+    --model_name "/workspace/echomimic_v3/flash-pro/Wan2.1-Fun-V1.1-1.3B-InP" \
+    --transformer_path "/workspace/echomimic_v3/flash-pro/transformer/diffusion_pytorch_model.safetensors" \
+    --wav2vec_model_dir "/workspace/echomimic_v3/flash-pro/chinese-wav2vec2-base" \
     --save_path "outputs" \
-    --wav2vec_model_dir "/path/to/your/directory/flash_pro/chinese-wav2vec2-base" \
     --sampler_name "Flow_Unipc" \
     --video_length 81 \
     --guidance_scale 6.0 \
     --audio_guidance_scale 3.0 \
-    --audio_scale 1.0 \
-    --neg_scale 1.0 \
-    --neg_steps 0 \
     --seed 43 \
     --enable_teacache \
-    --teacache_threshold 0.1 \
-    --num_skip_start_steps 5 \
-    --teacache_offload False \
-    --enable_riflex False \
-    --riflex_k 6 \
-    --ulysses_degree 1 \
-    --ring_degree 1 \
-    --fsdp_dit False \
     --weight_dtype "bfloat16" \
     --sample_size 768 768 \
-    --fps 25 \
-    --add_prompt "" \
-    --negative_prompt "" \
-    --shift 5.0
+    --fps 25

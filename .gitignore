@@ -10,10 +10,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 scripts_demo*
-
+*.wav
+*.png
 # C extensions
 *.so
-
+flash-pro
 # Distribution / packaging
 .Python
 build/

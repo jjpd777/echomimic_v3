@@ -1,3 +1,6 @@
+from transformers import AutoTokenizer
+from .wan_vae import AutoencoderKLWan
+from .wan_transformer3d_audio_2512 import WanTransformerAudioMask3DModel as WanTransformer
 import inspect
 import math
 from dataclasses import dataclass

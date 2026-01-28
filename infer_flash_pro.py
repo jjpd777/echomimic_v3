@@ -302,7 +302,8 @@ def main():
             pipeline.transformer = shard_fn(pipeline.transformer)
 
 
-    pipeline.to(device=device)
+    #pipeline.to(device=device)
+    pipeline.enable_sequential_cpu_offload()
 
     coefficients = get_teacache_coefficients(model_name) if enable_teacache else None
     if coefficients is not None:
@@ -313,7 +314,7 @@ def main():
 
     generator = torch.Generator(device=device).manual_seed(seed)
 
-    pipeline.to(device=device)
+    #pipeline.to(device=device)
 
     # Create output directory
     if not os.path.exists(save_path):
