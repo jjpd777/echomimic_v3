@@ -1,0 +1,13 @@
+[
+  {
+    "portrait_image": "https://example.com/signed-url-1/image.png?signature=abc123",
+    "portrait_audio": "https://example.com/signed-url-1/audio.wav?signature=def456",
+    "output_name": "video_001"
+  },
+  {
+    "portrait_image": "https://example.com/signed-url-2/image.png?signature=ghi789",
+    "portrait_audio": "https://example.com/signed-url-2/audio.wav?signature=jkl012",
+    "output_name": "video_002"
+  }
+]
+

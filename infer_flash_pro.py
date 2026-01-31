@@ -131,7 +131,7 @@ def get_ip_mask(coords):
     mask = mask.reshape(-1)
     return mask.float()
 
-def get_audio_embed(mel_input, wav2vec_feature_extractor, audio_encoder, video_length, sr=16000, fps=25, device='cpu'):
+def get_audio_embed(mel_input, wav2vec_feature_extractor, audio_encoder, video_length=81, sr=16000, fps=25, device='cpu'):
 
     # wav2vec_feature_extractor
     audio_feature = np.squeeze(wav2vec_feature_extractor(mel_input, sampling_rate=sr).input_values)
